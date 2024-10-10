@@ -5,7 +5,7 @@ use crate::userland::rights::CapRights;
 use crate::vspace::*;
 use core::ops::{Add, Sub};
 
-use selfe_sys::*;
+use sel_claw::*;
 use typenum::*;
 
 use crate::error::{ErrorExt, SeL4Error};

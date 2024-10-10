@@ -1,4 +1,4 @@
-use selfe_sys::{seL4_CapRights_new, seL4_CapRights_t};
+use sel_claw::{seL4_CapRights_new, seL4_CapRights_t};
 
 #[derive(Eq, PartialEq, Debug, Clone, Copy)]
 pub enum CapRights {

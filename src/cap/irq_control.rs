@@ -2,7 +2,7 @@ use core::marker::PhantomData;
 
 use typenum::*;
 
-use selfe_sys::*;
+use sel_claw::*;
 
 use crate::cap::{
     irq_handler, irq_state, CNodeRole, CNodeSlot, Cap, CapType, IRQHandler, LocalCap,

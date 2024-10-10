@@ -1,7 +1,7 @@
 use core::marker::PhantomData;
 use core::ops::{Add, Mul, Sub};
 
-use selfe_sys::*;
+use sel_claw::*;
 
 use typenum::operator_aliases::{Diff, Prod, Sum};
 

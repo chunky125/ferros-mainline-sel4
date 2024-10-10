@@ -5,7 +5,7 @@ use core::ops::{Add, Mul, Sub};
 
 use arrayvec::ArrayVec;
 
-use selfe_sys::*;
+use sel_claw::*;
 
 use typenum::*;
 

@@ -6,6 +6,5 @@ edition = "2018"
 resolver = "2"
 
 [dependencies]
-selfe-sys = "0.1"
-selfe-runtime = { version = "0.1", features = ["panic_handler"] }
+sel-claw = { path = "/home/chunky/Devel/sel-claw" }
 ferros = { path = "../../.." }

@@ -2,9 +2,13 @@
 #![no_main]
 
 use ferros::*;
-extern crate selfe_runtime;
+extern crate sel_claw;
 
 use hello_printer::ProcParams;
+use core::panic::PanicInfo;
+
+#[cfg(feature = "panic_handler")]
+mod panic;
 
 #[no_mangle]
 pub extern "C" fn _start(params: ProcParams) -> ! {
@@ -16,7 +20,15 @@ pub extern "C" fn _start(params: ProcParams) -> ! {
 
     unsafe {
         loop {
-            selfe_sys::seL4_Yield();
+            sel_claw::seL4_Yield();
         }
     }
 }
+
+#[panic_handler]
+fn panic(info: &PanicInfo) -> ! {
+
+    loop {}
+}
+
+

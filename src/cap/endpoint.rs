@@ -1,6 +1,6 @@
 use typenum::*;
 
-use selfe_sys::*;
+use sel_claw::*;
 
 use crate::cap::{CapType, CopyAliasable, DirectRetype, Mintable, PhantomCap};
 

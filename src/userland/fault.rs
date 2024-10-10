@@ -1,6 +1,6 @@
 use core::marker::PhantomData;
 
-use selfe_sys::*;
+use sel_claw::*;
 
 use crate::arch::fault::Fault;
 use crate::cap::{

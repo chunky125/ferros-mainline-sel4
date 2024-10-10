@@ -1,6 +1,6 @@
 use core::marker::PhantomData;
 
-use selfe_sys::{seL4_Signal, seL4_Wait};
+use sel_claw::{seL4_Signal, seL4_Wait};
 use typenum::{Unsigned, U2, U4};
 
 use crate::arch::{self, PageBits, PageBytes};

@@ -1,6 +1,6 @@
 use core::marker::PhantomData;
 
-use selfe_sys::seL4_Yield;
+use sel_claw::seL4_Yield;
 
 use typenum::*;
 

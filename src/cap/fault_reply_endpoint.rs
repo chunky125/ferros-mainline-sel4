@@ -2,7 +2,7 @@ use crate::arch;
 use crate::cap::{CNodeSlotsData, Cap, CapType, LocalCNodeSlot, LocalCap};
 use crate::error::{ErrorExt, SeL4Error};
 use core::marker::PhantomData;
-use selfe_sys::*;
+use sel_claw::*;
 use typenum::*;
 
 #[derive(Debug)]

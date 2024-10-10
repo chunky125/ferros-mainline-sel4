@@ -41,7 +41,7 @@ use core::ops::Sub;
 
 use cross_queue::{ArrayQueue, PushError, Slot};
 use generic_array::ArrayLength;
-use selfe_sys::{seL4_Signal, seL4_Wait};
+use sel_claw::{seL4_Signal, seL4_Wait};
 use typenum::*;
 
 use crate::arch::{self, PageBits};

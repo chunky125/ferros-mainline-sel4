@@ -1,4 +1,4 @@
-use selfe_sys::*;
+use sel_claw::*;
 
 use crate::cap::{
     page_state, role, CapType, ChildCNode, CopyAliasable, DirectRetype, LocalCap, Page, PhantomCap,

@@ -1,6 +1,6 @@
 use core::marker::PhantomData;
 
-use selfe_sys::*;
+use sel_claw::*;
 
 use crate::cap::{Cap, CapType, DirectRetype, LocalCap, PhantomCap, ThreadControlBlock};
 use crate::error::{ErrorExt, SeL4Error};

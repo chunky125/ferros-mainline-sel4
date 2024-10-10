@@ -11,7 +11,7 @@
 
 extern crate arrayvec;
 extern crate generic_array;
-extern crate selfe_sys;
+extern crate sel_claw;
 extern crate typenum;
 
 extern crate cross_queue;

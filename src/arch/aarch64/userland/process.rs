@@ -1,7 +1,7 @@
 use core::mem;
 use core::ptr;
 
-use selfe_sys::*;
+use sel_claw::*;
 
 /// Set up the target registers and stack to pass the parameter.
 /// https://en.wikipedia.org/wiki/Calling_convention#ARM_(A64)
@@ -84,7 +84,7 @@ pub(crate) unsafe fn setup_initial_stack_and_regs(
 }
 
 pub(crate) fn set_thread_link_register(
-    registers: &mut selfe_sys::seL4_UserContext,
+    registers: &mut sel_claw::seL4_UserContext,
     post_return_fn: fn() -> !,
 ) {
     registers.x30 = (post_return_fn as *const fn() -> !) as usize;

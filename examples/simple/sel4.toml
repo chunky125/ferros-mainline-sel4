@@ -1,15 +1,3 @@
-### Sabre (ARMv7 imx6)
-[build.sabre]
-cross_compiler_prefix = "arm-linux-gnueabihf-"
-
-[build.sabre.debug]
-make_root_task = "./cargo-build.sh --target=armv7-unknown-linux-gnueabihf -vv"
-root_task_image = "target/armv7-unknown-linux-gnueabihf/debug/root-task"
-
-[build.sabre.release]
-make_root_task = "./cargo-build.sh --target=armv7-unknown-linux-gnueabihf --release"
-root_task_image = "target/armv7-unknown-linux-gnueabihf/release/root-task"
-
 ### virt (ARMv8)
 [build.virt]
 cross_compiler_prefix = "aarch64-linux-gnu-"
@@ -32,29 +20,17 @@ musl_libc = { git = "https://github.com/seL4/musllibc.git", branch = "sel4" }
 
 [sel4.config.arm]
 KernelArch = 'arm'
-KernelArchArm = true
 KernelIPCBufferLocation = 'threadID_register'
 
 ### sel4_arch
 
-[sel4.config.aarch32]
-KernelSel4Arch = 'aarch32'
-KernelWordSize = 32
-
 [sel4.config.aarch64]
 KernelSel4Arch = 'aarch64'
-KernelWordSize = 64
+KernalArmSel4Arch = 'aarch64'
 
 ### platform
-
-[sel4.config.sabre]
-KernelPlatform = "imx6"
-KernelPlatformSabre = true
-KernelHaveFPU = true
-KernelSel4ArchArmHyp = false
-
 [sel4.config.virt]
-KernelPlatform = 'virt'
+KernelPlatform = 'qemu-arm-virt'
 KernelHaveFPU = true
 ElfloaderImage = 'elf'
 KernelSel4ArchArmHyp = true

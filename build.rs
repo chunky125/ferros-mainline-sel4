@@ -1,7 +1,7 @@
-extern crate selfe_config;
-use selfe_config::build_helpers::*;
-use selfe_config::model::contextualized::Contextualized;
-use selfe_config::model::*;
+extern crate sel_claw_build;
+use sel_claw_build::build_helpers::*;
+use sel_claw_build::model::contextualized::Contextualized;
+use sel_claw_build::model::*;
 
 use std::cmp::max;
 use std::env;

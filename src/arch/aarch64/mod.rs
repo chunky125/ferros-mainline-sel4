@@ -127,22 +127,22 @@ pub const WORDS_PER_PAGE: usize = PageBytes::USIZE / core::mem::size_of::<usize>
 
 /// Type type alias allows us to treat vm_attributes in a cross-architecture
 /// way, abstractly
-pub type VMAttributes = selfe_sys::seL4_ARM_VMAttributes;
+pub type VMAttributes = sel_claw::seL4_ARM_VMAttributes;
 
 /// A convenience module
 pub mod vm_attributes {
     use super::*;
 
     pub const DEFAULT: VMAttributes =
-        selfe_sys::seL4_ARM_VMAttributes_seL4_ARM_Default_VMAttributes;
+        sel_claw::seL4_ARM_VMAttributes_seL4_ARM_Default_VMAttributes;
 
     pub const PAGE_CACHEABLE: VMAttributes =
-        selfe_sys::seL4_ARM_VMAttributes_seL4_ARM_PageCacheable;
+        sel_claw::seL4_ARM_VMAttributes_seL4_ARM_PageCacheable;
 
     pub const PARITY_ENABLED: VMAttributes =
-        selfe_sys::seL4_ARM_VMAttributes_seL4_ARM_ParityEnabled;
+        sel_claw::seL4_ARM_VMAttributes_seL4_ARM_ParityEnabled;
 
-    pub const EXECUTE_NEVER: VMAttributes = selfe_sys::seL4_ARM_VMAttributes_seL4_ARM_ExecuteNever;
+    pub const EXECUTE_NEVER: VMAttributes = sel_claw::seL4_ARM_VMAttributes_seL4_ARM_ExecuteNever;
 
     pub const PROGRAM_CODE: VMAttributes = DEFAULT;
 
@@ -150,7 +150,7 @@ pub mod vm_attributes {
 }
 
 pub(crate) unsafe fn flush_page(cptr: usize) -> Result<(), SeL4Error> {
-    selfe_sys::seL4_ARM_Page_CleanInvalidate_Data(cptr, 0x0000, PageBytes::USIZE)
+    sel_claw::seL4_ARM_Page_CleanInvalidate_Data(cptr, 0x0000, PageBytes::USIZE)
         .as_result()
         .map_err(SeL4Error::PageCleanInvalidateData)?;
 

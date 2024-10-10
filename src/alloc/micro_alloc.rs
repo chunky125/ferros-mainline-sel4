@@ -4,7 +4,7 @@
 use core::fmt::{Debug, Error as FmtError, Formatter};
 use core::marker::PhantomData;
 
-use selfe_sys::seL4_BootInfo;
+use sel_claw::seL4_BootInfo;
 
 use crate::arch::MaxNaiveSplitCount;
 use crate::arch::MaxUntypedSize as MaxUntypedSizeBits;

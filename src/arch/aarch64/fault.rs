@@ -1,6 +1,6 @@
 use crate::cap::Badge;
 use crate::userland::MessageInfo;
-use selfe_sys::*;
+use sel_claw::*;
 
 #[derive(Debug)]
 pub struct VMFault {

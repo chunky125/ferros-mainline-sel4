@@ -1,4 +1,4 @@
-use selfe_sys::*;
+use sel_claw::*;
 
 use crate::arch::PagingRoot;
 use crate::cap::{page_state, CapType, LocalCap, Page, PhantomCap};

@@ -27,11 +27,11 @@ mod resources {
 }
 
 fn main() {
-    let raw_bootinfo = unsafe { &*selfe_start::BOOTINFO };
+    let raw_bootinfo = unsafe { &*sel_claw::env::bootinfo() };
     run(raw_bootinfo).expect("Failed to run root task setup");
 }
 
-fn run(raw_bootinfo: &'static selfe_sys::seL4_BootInfo) -> Result<(), TopLevelError> {
+fn run(raw_bootinfo: &'static sel_claw::seL4_BootInfo) -> Result<(), TopLevelError> {
     let (allocator, mut dev_allocator) = micro_alloc::bootstrap_allocators(&raw_bootinfo)?;
     let mut allocator = WUTBuddy::from(allocator);
 
@@ -130,7 +130,13 @@ fn run(raw_bootinfo: &'static selfe_sys::seL4_BootInfo) -> Result<(), TopLevelEr
 
     unsafe {
         loop {
-            selfe_sys::seL4_Yield();
+            sel_claw::seL4_Yield();
         }
     }
 }
+
+#[panic_handler]
+fn panic(info: &core::panic::PanicInfo) -> ! {
+    loop {}
+}
+

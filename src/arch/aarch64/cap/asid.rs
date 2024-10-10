@@ -1,6 +1,6 @@
 use core::mem;
 
-use selfe_sys::*;
+use sel_claw::*;
 
 use crate::cap::{AssignedASID, LocalCap, UnassignedASID};
 use crate::error::{ErrorExt, SeL4Error};

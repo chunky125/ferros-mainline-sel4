@@ -1,6 +1,6 @@
 use core::marker::PhantomData;
 
-use selfe_sys::*;
+use sel_claw::*;
 use typenum::*;
 
 use crate::error::{ErrorExt, SeL4Error};

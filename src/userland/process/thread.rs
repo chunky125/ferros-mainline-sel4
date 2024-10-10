@@ -4,7 +4,7 @@ use crate::pow::{Pow, _Pow};
 use crate::vspace::*;
 use core::ops::Sub;
 
-use selfe_sys::*;
+use sel_claw::*;
 use typenum::*;
 
 use crate::error::{ErrorExt, SeL4Error};

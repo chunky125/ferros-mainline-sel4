@@ -53,20 +53,20 @@ pub trait ErrorExt {
     fn as_result(self) -> Result<(), KernelError>;
 }
 
-impl ErrorExt for selfe_sys::seL4_Error {
+impl ErrorExt for sel_claw::seL4_Error {
     fn as_result(self) -> Result<(), KernelError> {
         match self {
-            selfe_sys::seL4_Error_seL4_NoError => Ok(()),
-            selfe_sys::seL4_Error_seL4_InvalidArgument => Err(KernelError::InvalidArgument),
-            selfe_sys::seL4_Error_seL4_InvalidCapability => Err(KernelError::InvalidCapability),
-            selfe_sys::seL4_Error_seL4_IllegalOperation => Err(KernelError::IllegalOperation),
-            selfe_sys::seL4_Error_seL4_RangeError => Err(KernelError::RangeError),
-            selfe_sys::seL4_Error_seL4_AlignmentError => Err(KernelError::AlignmentError),
-            selfe_sys::seL4_Error_seL4_FailedLookup => Err(KernelError::FailedLookup),
-            selfe_sys::seL4_Error_seL4_TruncatedMessage => Err(KernelError::TruncatedMessage),
-            selfe_sys::seL4_Error_seL4_DeleteFirst => Err(KernelError::DeleteFirst),
-            selfe_sys::seL4_Error_seL4_RevokeFirst => Err(KernelError::RevokeFirst),
-            selfe_sys::seL4_Error_seL4_NotEnoughMemory => Err(KernelError::NotEnoughMemory),
+            sel_claw::seL4_Error_seL4_NoError => Ok(()),
+            sel_claw::seL4_Error_seL4_InvalidArgument => Err(KernelError::InvalidArgument),
+            sel_claw::seL4_Error_seL4_InvalidCapability => Err(KernelError::InvalidCapability),
+            sel_claw::seL4_Error_seL4_IllegalOperation => Err(KernelError::IllegalOperation),
+            sel_claw::seL4_Error_seL4_RangeError => Err(KernelError::RangeError),
+            sel_claw::seL4_Error_seL4_AlignmentError => Err(KernelError::AlignmentError),
+            sel_claw::seL4_Error_seL4_FailedLookup => Err(KernelError::FailedLookup),
+            sel_claw::seL4_Error_seL4_TruncatedMessage => Err(KernelError::TruncatedMessage),
+            sel_claw::seL4_Error_seL4_DeleteFirst => Err(KernelError::DeleteFirst),
+            sel_claw::seL4_Error_seL4_RevokeFirst => Err(KernelError::RevokeFirst),
+            sel_claw::seL4_Error_seL4_NotEnoughMemory => Err(KernelError::NotEnoughMemory),
             unknown => Err(KernelError::UnknownError(unknown)),
         }
     }

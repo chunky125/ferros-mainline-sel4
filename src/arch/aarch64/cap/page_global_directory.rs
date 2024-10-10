@@ -1,4 +1,4 @@
-use selfe_sys::*;
+use sel_claw::*;
 
 use typenum::Unsigned;
 
@@ -26,7 +26,7 @@ impl Maps<PageUpperDirectory> for PageGlobalDirectory {
         vm_attributes: seL4_ARM_VMAttributes,
     ) -> Result<(), MappingError> {
         unsafe {
-            seL4_ARM_PageUpperDirectory_Map(
+            seL4_ARM_PageTable_Map(
                 upper_dir.cptr,
                 root.cptr,
                 addr & GD_MASK,

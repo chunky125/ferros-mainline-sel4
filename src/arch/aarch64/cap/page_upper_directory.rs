@@ -1,4 +1,4 @@
-use selfe_sys::*;
+use sel_claw::*;
 
 use typenum::Unsigned;
 
@@ -25,7 +25,7 @@ impl Maps<PageDirectory> for PageUpperDirectory {
         vm_attributes: seL4_ARM_VMAttributes,
     ) -> Result<(), MappingError> {
         match unsafe {
-            seL4_ARM_PageDirectory_Map(dir.cptr, root.cptr, addr & UD_MASK, vm_attributes)
+            seL4_ARM_PageTable_Map(dir.cptr, root.cptr, addr & UD_MASK, vm_attributes)
         }
         .as_result()
         {

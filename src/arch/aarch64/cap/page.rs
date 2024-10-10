@@ -1,4 +1,4 @@
-use selfe_sys::*;
+use sel_claw::*;
 
 use crate::cap::{page_state, DirectRetype, LocalCap, Page, PageState, PhantomCap};
 use crate::error::{ErrorExt, SeL4Error};

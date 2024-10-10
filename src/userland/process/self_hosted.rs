@@ -2,7 +2,7 @@ use crate::pow::{Pow, _Pow};
 use core::ops::{Add, Sub};
 use typenum::*;
 
-use selfe_sys::*;
+use sel_claw::*;
 
 use crate::arch::{self, PageBits};
 use crate::cap::{

@@ -6,9 +6,8 @@ edition = "2018"
 resolver = "2"
 
 [dependencies]
-selfe-sys = "0.1"
-selfe-start = { version = "0.1", features = ["panic_handler"] }
-selfe-arc = { version = "0.1", default-features = false, features = [] }
+sel-claw = { path = "/home/chunky/Devel/sel-claw" }
+selfe-arc = { path = "/home/chunky/Devel/sel-claw/selfe-arc", default-features = false, features = [] }
 ferros = { path = "../../.." }
 typenum = "1.10"
 xmas-elf = "0.7"

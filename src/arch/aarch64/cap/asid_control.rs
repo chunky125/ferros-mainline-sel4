@@ -3,7 +3,7 @@ use core::ops::Sub;
 
 use typenum::*;
 
-use selfe_sys::*;
+use sel_claw::*;
 
 use crate::arch;
 use crate::cap::{
